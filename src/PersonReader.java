@@ -26,7 +26,7 @@ public class PersonReader {
         try
         {
             // uses a fixed known path:
-            //  Path file = Paths.get("c:\\My Documents\\data.txt");
+            //  Path file = Paths.get("c:\\My Documents\\PersonTestData.txt");
 
             // use the toolkit to get the current working directory of the IDE
             // Not sure if the toolkit is thread safe...

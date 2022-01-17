@@ -40,14 +40,14 @@ public class PersonGenerator {
         }while(!done);
 
         // uses a fixed known path:
-        //  Path file = Paths.get("c:\\My Documents\\data.txt");
+        //  Path file = Paths.get("c:\\My Documents\\PersonTestData.txt");
 
         // use the toolkit to get the current working directory of the IDE
         // will create the file within the Netbeans project src folder
         // (may need to adjust for other IDE)
         // Not sure if the toolkit is thread safe...
         File workingDirectory = new File(System.getProperty("user.dir"));
-        Path file = Paths.get(workingDirectory.getPath() + "\\src\\data.txt");
+        Path file = Paths.get(workingDirectory.getPath() + "\\src\\PersonTestData.txt");
 
         try
         {
