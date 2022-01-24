@@ -10,11 +10,11 @@ public class Person {
     }
 
     public Person(String fName, String lName, String id, String titleIN, int yob){
-        firstName = fName;
-        lastName = lName;
-        ID = id;
-        title = titleIN;
-        YOB = yob;
+        this.firstName = fName;
+        this.lastName = lName;
+        this.ID = id;
+        this.title = titleIN;
+        this.YOB = yob;
     }
 
     public String fullName(){

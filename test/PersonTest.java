@@ -4,13 +4,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class PersonTest {
-
-    Person p1, p2;
-
+    Person p1;
     @BeforeEach
     void setUp() {
-        p1 = new Person("000001", "Bob", "tester", "Mr.", 1996);
-        p2 = new Person("000002", "Jim", "tester", "Mr.", 1997);
+    p1 = new Person("000001", "John", "Tester", "Mr.", 1995);
     }
 
     @Test
