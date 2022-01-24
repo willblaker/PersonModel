@@ -13,6 +13,8 @@ import static java.lang.System.out;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+
 import static java.nio.file.StandardOpenOption.CREATE;
 import javax.swing.JFileChooser;
 
@@ -22,6 +24,7 @@ public class PersonReader {
         JFileChooser chooser = new JFileChooser();
         File selectedFile;
         String rec = "";
+        ArrayList<Person> pList = new ArrayList<Person>();
 
         try
         {
@@ -62,11 +65,11 @@ public class PersonReader {
                     line++;
                     // echo to screen
                     String[] rec2 = rec.split(",");
+                    Person p = new Person(rec2[0], rec2[1], rec2[2],rec2[3], Integer.parseInt(rec2[4]));
+                    pList.add(p);
                     //String output = rec2[0] + "\t" + rec2[1] + "\t" + rec2[2] + "\t" + rec2[3] + "\t"+ rec2[4];
                     System.out.printf("%1s%16s%16s%16s%16s", rec2[0], rec2[1],rec2[2],rec2[3],rec2[4]);
                     System.out.println();
-
-
                 }
                 reader.close(); // must close the file to seal it and flush buffer
                 System.out.println("\n\nData file read!");

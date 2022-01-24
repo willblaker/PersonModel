@@ -17,6 +17,7 @@ public class PersonGenerator {
     {
         // Test data the lines of the file we will write
         ArrayList <String>recs = new ArrayList<>();
+        ArrayList<Person> pList = new ArrayList<Person>();
 
         Scanner in = new Scanner(System.in);
         boolean done = false;
@@ -33,6 +34,8 @@ public class PersonGenerator {
             title = SafeInput.getNonZeroLenString(in, "Input Title: ");
             yob = SafeInput.getInt(in, "Input Year of Birth: ");
             //put them into string, with commas separating data
+            Person p = new Person(id, fName, lName, title, yob);
+            pList.add(p);
             String input = id + ", " + fName + ", " + lName + ", " + title + ", " + yob;
             // add to the array list
             recs.add(input);
@@ -75,5 +78,6 @@ public class PersonGenerator {
         {
             e.printStackTrace();
         }
+
     }
 }
